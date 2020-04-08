@@ -1,0 +1,21 @@
+﻿@model Clases
+@{
+    ViewData["Title"] = "Create";
+}
+<h1>Agregar</h1>
+<form asp-action="Create">
+    <div class="form-group">
+        <label for="clave">Clave</label>
+        <input type="text" class="form-control" id="Clave" aria-describedby="calveHelp" asp-for="Clave"/>
+        <small id="claceHelp" class="form-text text-muted">Corrobore que la clave es la correcta.</small>
+    </div>
+    <div class="form-group">
+        <label for="profesor">Profesor</label>
+        <input type="text" class="form-control" id="Profesor" asp-for="Profesor"/>
+    </div>
+    <div class="form-group">
+        <label for="cupo">Cupo</label>
+        <input type="number" class="form-control" id="Cupo" asp-for="Cupo"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

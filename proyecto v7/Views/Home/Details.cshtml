@@ -1,0 +1,27 @@
+﻿@model Clases
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="card">
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-2">Id</dt>
+            <dd class="col-10">
+                @Model.Id
+            </dd>
+            <dt class="col-2">Clave</dt>
+            <dd class="col-10">
+                @Model.Clave
+            </dd>
+            <dt class="col-2">Profesor</dt>
+            <dd class="col-10">
+                @Model.Profesor
+            </dd>
+            <dt class="col-2">Cupo</dt>
+            <dd class="col-10">
+                @Model.Cupo
+            </dd>
+        </dl>
+    </div>
+</div>
