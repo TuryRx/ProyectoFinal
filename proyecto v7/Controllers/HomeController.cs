@@ -25,7 +25,7 @@ namespace proyecto_v7.Controllers
         {
             var data = new List<Clases>();
             SqlConnection con = new SqlConnection(connectionString);
-            SqlCommand cmd = new SqlCommand("SELECT [Clave], [Profesor], [Cupo] FROM [Clases]", con);
+            SqlCommand cmd = new SqlCommand("SELECT [Id], [Clave], [Profesor], [Cupo] FROM [Clases]", con);
             try
             {
                 con.Open();
@@ -34,6 +34,7 @@ namespace proyecto_v7.Controllers
                 {
                     data.Add(new Clases
                     {
+                        data.Id = (Guid)dr["Id"],
                         Clave = (string)dr["Clave"],
                         Profesor = (string)dr["Profesor"],
                         Cupo = (int)dr["Cupo"]
